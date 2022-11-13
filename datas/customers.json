@@ -1,0 +1,685 @@
+[{
+  "_id": {
+    "$oid": "62c3fdd81b17f5afe34baf32"
+  },
+  "firstName": "Open Doors",
+  "lastName": "Cosmetics & Perfurmery",
+  "phoneNumber": "08035973600",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657011672915"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1657011672915"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c6857b3c6939de3dbb705c"
+  },
+  "firstName": "BIVON",
+  "lastName": "VENTURES LTD",
+  "phoneNumber": "08033068636",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657177467568"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1657177467568"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c6985c3c6939de3dbb7228"
+  },
+  "firstName": "ARI-BEN GLOBAL",
+  "lastName": "SERVICES LTD",
+  "phoneNumber": "080339244749",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657182300714"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1657182300714"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c69ba83c6939de3dbb722c"
+  },
+  "firstName": "CAPTAINO GLOBAL",
+  "lastName": "CONCEPT LTD",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657183144235"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1657183144235"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbbbe6288f709e2ea139a2"
+  },
+  "firstName": "NINO-LYNKS INVEST. LTD",
+  "lastName": "INVEST. LTD",
+  "phoneNumber": "08036800559",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658567654107"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658567654107"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbbc8c288f709e2ea139a6"
+  },
+  "firstName": "FORTUNES",
+  "lastName": "ENT.",
+  "phoneNumber": "08184089840",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658567820794"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658567820794"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbbcd5288f709e2ea139aa"
+  },
+  "firstName": "CHIMEX",
+  "lastName": "ENT. LTD",
+  "phoneNumber": "08079576364",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658567893491"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658567893491"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbbd25288f709e2ea139ae"
+  },
+  "firstName": "K.C WHOLESALE",
+  "lastName": "CO. LTD",
+  "phoneNumber": "08033146998",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658567973226"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658567973226"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbbe1f288f709e2ea139b2"
+  },
+  "firstName": "FAR EAST MERCHANTILE",
+  "lastName": "CO. LTD",
+  "phoneNumber": "08032755365",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658568223300"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658568223300"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbbe66288f709e2ea139b6"
+  },
+  "firstName": "TIGER BEVERAGES",
+  "lastName": "LTD",
+  "phoneNumber": "08033238313",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658568294066"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658568294066"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbbec2288f709e2ea139ba"
+  },
+  "firstName": "PUMPIN",
+  "lastName": "NIG. LTD",
+  "phoneNumber": "08036046709",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658568386346"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658568386346"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbc00e288f709e2ea139be"
+  },
+  "firstName": "ACHIDA & SONS",
+  "lastName": "NIGERIA LTD",
+  "phoneNumber": "08089797375",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658568718477"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658568718477"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dbfed44f468606dfca3f0c"
+  },
+  "firstName": "Bulus ",
+  "lastName": "David",
+  "phoneNumber": "",
+  "status": "Inactive",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658584788846"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1659024350566"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfbf7fe44400b216d41516"
+  },
+  "firstName": "vanye",
+  "lastName": "christoher",
+  "phoneNumber": "",
+  "status": "Inactive",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658830719489"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1659024365420"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfd746e44400b216d416a1"
+  },
+  "firstName": "ZEPHYGOLD FOODS &",
+  "lastName": "FARMS LTD",
+  "phoneNumber": "07067163693",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658836806235"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658836806235"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfd7b8e44400b216d416a7"
+  },
+  "firstName": "SHADRAB ",
+  "lastName": "CONFECTIONARIES LTD",
+  "phoneNumber": "0819118659",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658836920724"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658842375422"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfe033f96cea3b60363c6c"
+  },
+  "firstName": "VINARA",
+  "lastName": "CONFECTIONARIES LTD",
+  "phoneNumber": "08062559425",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658839091475"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658842410138"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfe98fec952f3c79216c5c"
+  },
+  "firstName": "EASY ",
+  "lastName": "BITE",
+  "phoneNumber": "08174174259",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658841487354"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658841487354"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dffd8a9daea2459a965a93"
+  },
+  "firstName": "CHICO",
+  "lastName": "BAKERY",
+  "phoneNumber": "07030970877",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658846602302"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658846602302"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e06b4032330063641a3f55"
+  },
+  "firstName": "KAREX",
+  "lastName": "INDUSRIES",
+  "phoneNumber": "+234 09092626262",
+  "status": "Inactive",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658874688726"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1659024444793"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e158945860302a76a0a327"
+  },
+  "firstName": "DUNAMIS",
+  "lastName": "BAKERY",
+  "phoneNumber": "08058198850",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658935444528"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658935444528"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e15f685860302a76a0a3b3"
+  },
+  "firstName": "customer",
+  "lastName": "customer",
+  "phoneNumber": "",
+  "status": "Inactive",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658937192427"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658940349749"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e15f975860302a76a0a3c4"
+  },
+  "firstName": "QUEENS",
+  "lastName": "MEAL",
+  "phoneNumber": "08028336716",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658937239346"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658937239346"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e17871e9e7c9c2b33ed4c6"
+  },
+  "firstName": "CUSTOMER",
+  "lastName": "CUSTOMER",
+  "phoneNumber": "",
+  "status": "Inactive",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658943601660"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1659024398500"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e2bd28b9b7f87b45a42a62"
+  },
+  "firstName": "PARVIC",
+  "lastName": "SUPERMARKET",
+  "phoneNumber": "",
+  "status": "Inactive",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659026728754"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664211356453"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ebff60b09177196a033179"
+  },
+  "firstName": "HONIPOD",
+  "lastName": "NIGERIA LTD",
+  "phoneNumber": "07000223344",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659633504932"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1659633504932"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f7f08b6964fb240a74524a"
+  },
+  "firstName": "BUSISO",
+  "lastName": "INTEGRATED RESOURCES",
+  "phoneNumber": "08037881591",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660416139053"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660416139053"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f81d70ffbd2348a3b42478"
+  },
+  "firstName": "FORTUNE ",
+  "lastName": "ENT.",
+  "phoneNumber": "07063866333",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660427632130"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660427632130"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f81daeffbd2348a3b4247d"
+  },
+  "firstName": "ALHAJI IDRIS ",
+  "lastName": "SALEH NIG. LTD",
+  "phoneNumber": "08032890038",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660427694061"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660427813272"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6331da4e8d1c43296c80c8d2"
+  },
+  "firstName": "DEELITE IMPEX",
+  "lastName": "DIST. CO LTD",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664211534828"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664211534828"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6332bdf4c14cff2af0cb6334"
+  },
+  "firstName": "JUSILTO ",
+  "lastName": "NIGERIA LTD",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664269812439"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664269812439"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6333804d28c5d1b388561618"
+  },
+  "firstName": "NUGO ",
+  "lastName": "IMPEX LIMITED",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664319565974"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664319565974"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6333e35328c5d1b388561751"
+  },
+  "firstName": "OKWUSON INTEGRATED",
+  "lastName": "VENT. LTD",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664344915926"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664344915926"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6333ec2a28c5d1b388561811"
+  },
+  "firstName": "WILLZARA MULTI-VENT",
+  "lastName": "COMPANY",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664347178981"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664347178981"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633616e64eab92175b944096"
+  },
+  "firstName": "PCI",
+  "lastName": "LIMITED",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664489190512"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664489190512"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633997ca087db7c6754bdf0d"
+  },
+  "firstName": "DOMI",
+  "lastName": "NANT",
+  "phoneNumber": "",
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664718794540"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664718794540"
+    }
+  },
+  "__v": 0
+}]

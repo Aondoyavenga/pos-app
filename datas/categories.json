@@ -1,0 +1,1615 @@
+[{
+  "_id": {
+    "$oid": "629e8df55f5ab8e6125061b7"
+  },
+  "name": "JUICE BEVERAGE",
+  "subCategory": [
+    {
+      "$oid": "62d7ac0cd6306ac5b4dbf12a"
+    },
+    {
+      "$oid": "62d7bc33d6306ac5b4dbf29d"
+    },
+    {
+      "$oid": "62d7cec7d6306ac5b4dbf3e2"
+    },
+    {
+      "$oid": "62d86231c1994f22fb7ce357"
+    },
+    {
+      "$oid": "62da64dd35acb5caaee357cc"
+    },
+    {
+      "$oid": "62e06c3232330063641a3f74"
+    },
+    {
+      "$oid": "633205678d1c43296c80cf11"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654558197701"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664222567531"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "629e8e615f5ab8e6125061ca"
+  },
+  "name": "CEREALS",
+  "subCategory": [
+    {
+      "$oid": "62c31a66674650a480af0627"
+    },
+    {
+      "$oid": "62c31cd1674650a480af067c"
+    },
+    {
+      "$oid": "62c3444ba2b65eb0bb677981"
+    },
+    {
+      "$oid": "62c35350a2b65eb0bb677a21"
+    },
+    {
+      "$oid": "62c35f2ff1329e0e48f67030"
+    },
+    {
+      "$oid": "62cccbd119e3261f8686ff01"
+    },
+    {
+      "$oid": "62ccce2319e3261f8686ff29"
+    },
+    {
+      "$oid": "62e973360f5850d1312ffcc6"
+    },
+    {
+      "$oid": "6321883a1ab769edec09eaa6"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654558305715"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663141946203"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "629f066ef504aac3e1b9481f"
+  },
+  "name": "COSMETICS",
+  "subCategory": [
+    {
+      "$oid": "629f06c9f504aac3e1b9482c"
+    },
+    {
+      "$oid": "629f39079e77d216ad46c628"
+    },
+    {
+      "$oid": "629fb1104fa31c4a280b8018"
+    },
+    {
+      "$oid": "62a1285046c2e0af843c4d4e"
+    },
+    {
+      "$oid": "62a3aeb87dc8e9ad196240b0"
+    },
+    {
+      "$oid": "62b19fa082a786371d351053"
+    },
+    {
+      "$oid": "62c5a2e55301b1e82aaf9239"
+    },
+    {
+      "$oid": "62eb8744ef2bd67e51edc76f"
+    },
+    {
+      "$oid": "62eb876cef2bd67e51edc77f"
+    },
+    {
+      "$oid": "6300a8a119ad75517b102c68"
+    },
+    {
+      "$oid": "6306d630eb653b7b880a3ce2"
+    },
+    {
+      "$oid": "6307eaa72a38cd112762f118"
+    },
+    {
+      "$oid": "630e0ffcd91932ea60c73b27"
+    },
+    {
+      "$oid": "6339efb5e1716190fb5c7d24"
+    },
+    {
+      "$oid": "633b12809e902a4c3fa9043b"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654589038735"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664815744843"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c214c9c2ea2b296e88ac7a"
+  },
+  "name": "GROCERIES",
+  "subCategory": [
+    {
+      "$oid": "62c21562c2ea2b296e88ac89"
+    },
+    {
+      "$oid": "62c363e2f1329e0e48f67058"
+    },
+    {
+      "$oid": "62d05e2e32151503e222bfb6"
+    },
+    {
+      "$oid": "62d330359e22df51706aff57"
+    },
+    {
+      "$oid": "62d33a759e22df51706b0033"
+    },
+    {
+      "$oid": "62d41579ec458232b1f1518f"
+    },
+    {
+      "$oid": "62dba75b288f709e2ea13900"
+    },
+    {
+      "$oid": "62dba8bc288f709e2ea13919"
+    },
+    {
+      "$oid": "62dd5290e8e9afb7ffacec90"
+    },
+    {
+      "$oid": "62dd671ae8e9afb7ffacedbe"
+    },
+    {
+      "$oid": "62dd76dae8e9afb7ffacee45"
+    },
+    {
+      "$oid": "62dd7b628f600b94609fbae0"
+    },
+    {
+      "$oid": "62dd86908f600b94609fbba2"
+    },
+    {
+      "$oid": "62dd8b9f8f600b94609fbc16"
+    },
+    {
+      "$oid": "62dd9c338f600b94609fbced"
+    },
+    {
+      "$oid": "62de8d1ac213ccb9fd7defcc"
+    },
+    {
+      "$oid": "62deb99b5b6d663d33920613"
+    },
+    {
+      "$oid": "62dec6495b6d663d3392065c"
+    },
+    {
+      "$oid": "62decdde5b6d663d33920684"
+    },
+    {
+      "$oid": "62deece85b6d663d33920784"
+    },
+    {
+      "$oid": "62e008639daea2459a965b1e"
+    },
+    {
+      "$oid": "62e067bc32330063641a3ef0"
+    },
+    {
+      "$oid": "62e0f1a0607a27d8fd9e9410"
+    },
+    {
+      "$oid": "62e17191e9e7c9c2b33ed30d"
+    },
+    {
+      "$oid": "62e173abe9e7c9c2b33ed332"
+    },
+    {
+      "$oid": "62e17f1de9e7c9c2b33ed520"
+    },
+    {
+      "$oid": "62e1806ee9e7c9c2b33ed539"
+    },
+    {
+      "$oid": "62e18893e9e7c9c2b33ed5a3"
+    },
+    {
+      "$oid": "62e18bbee9e7c9c2b33ed5cb"
+    },
+    {
+      "$oid": "62e19acbe9e7c9c2b33ed6ad"
+    },
+    {
+      "$oid": "62f55f7e00f0bb7496bc874c"
+    },
+    {
+      "$oid": "62f5646f00f0bb7496bc8765"
+    },
+    {
+      "$oid": "62f8ce47b591e512d595be20"
+    },
+    {
+      "$oid": "62fa666c3f868abaf0872b0d"
+    },
+    {
+      "$oid": "631f772449b46d05f6ad3eeb"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1656886473993"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663006500306"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c9fc2612296cb1ec8fb6da"
+  },
+  "name": "ASSORTED BISCUIT",
+  "subCategory": [
+    {
+      "$oid": "62c9fcf512296cb1ec8fb6e9"
+    },
+    {
+      "$oid": "62c9fe9712296cb1ec8fb702"
+    },
+    {
+      "$oid": "62cb28cc3d7ce557014ab5c2"
+    },
+    {
+      "$oid": "62cb31eb3d7ce557014ab5db"
+    },
+    {
+      "$oid": "62cb33723d7ce557014ab5f4"
+    },
+    {
+      "$oid": "62cb35f33d7ce557014ab63a"
+    },
+    {
+      "$oid": "62cb44f83d7ce557014ab6be"
+    },
+    {
+      "$oid": "62cb4f1b3d7ce557014ab6ed"
+    },
+    {
+      "$oid": "62cc6137eba3e3820845618f"
+    },
+    {
+      "$oid": "62cc7c5aeba3e38208456310"
+    },
+    {
+      "$oid": "632b669b082643db24723dc7"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657404454046"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663788699869"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cc0ad7225fb51260d47c22"
+  },
+  "name": "CRISP | SNACKs | NUTs",
+  "subCategory": [
+    {
+      "$oid": "62cc0b23225fb51260d47c31"
+    },
+    {
+      "$oid": "62ce708b01d6eb43b3e601ae"
+    },
+    {
+      "$oid": "62ce8ad801d6eb43b3e60354"
+    },
+    {
+      "$oid": "63066d8e1c0a1bbabe6edaa5"
+    },
+    {
+      "$oid": "6319130fdb3a0ded6ced66cd"
+    },
+    {
+      "$oid": "6329983971b3256fc50cea3e"
+    },
+    {
+      "$oid": "63299e9b71b3256fc50ceacf"
+    },
+    {
+      "$oid": "6339825ed65e375736791a4d"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657539287113"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664713310945"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cca003eba3e382084564a0"
+  },
+  "name": "Bakery Section",
+  "subCategory": [
+    {
+      "$oid": "62cca160eba3e382084564af"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657577475287"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658834352900"
+    }
+  },
+  "__v": 0,
+  "status": "Deleted"
+},{
+  "_id": {
+    "$oid": "62cd2496d00e14d1d9ebd1d3"
+  },
+  "name": "CANDY AISLE",
+  "subCategory": [
+    {
+      "$oid": "62cd24d0d00e14d1d9ebd1e2"
+    },
+    {
+      "$oid": "62cd2656d00e14d1d9ebd1f2"
+    },
+    {
+      "$oid": "62cd26f6d00e14d1d9ebd202"
+    },
+    {
+      "$oid": "62cd27b5d00e14d1d9ebd212"
+    },
+    {
+      "$oid": "633dec39cc750c8360845f28"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657611414044"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665002553099"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cd7020d00e14d1d9ebd357"
+  },
+  "name": "HEALTH & BEAUTY",
+  "subCategory": [
+    {
+      "$oid": "62ec0aa8b09177196a0331b2"
+    },
+    {
+      "$oid": "62ed8ccd47274fd16ee617f0"
+    },
+    {
+      "$oid": "62fa9bc83f868abaf087301e"
+    },
+    {
+      "$oid": "62fd445569e897e625989794"
+    },
+    {
+      "$oid": "62ffc211883fe578594f74b5"
+    },
+    {
+      "$oid": "63009e247982d06e5dde0a11"
+    },
+    {
+      "$oid": "63092a3ba1a9a80808c9ec77"
+    },
+    {
+      "$oid": "6309456251048c6bef6ab183"
+    },
+    {
+      "$oid": "630b61b3633eda7156072d58"
+    },
+    {
+      "$oid": "631270b9dd2aafc0481c6666"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657630752965"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662152889364"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cda5df7de84ebe9b768f45"
+  },
+  "name": "CANNED FOOD",
+  "subCategory": [
+    {
+      "$oid": "62cda6967de84ebe9b768f54"
+    },
+    {
+      "$oid": "62cdb3107de84ebe9b768f9a"
+    },
+    {
+      "$oid": "62ce6d5e01d6eb43b3e60195"
+    },
+    {
+      "$oid": "62dd5d03e8e9afb7ffaced3c"
+    },
+    {
+      "$oid": "62de6d83c213ccb9fd7deed1"
+    },
+    {
+      "$oid": "62de72cdc213ccb9fd7deef9"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657644511068"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658745549343"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cdb7927de84ebe9b768fe0"
+  },
+  "name": "DAIRY",
+  "subCategory": [
+    {
+      "$oid": "62cdb7b07de84ebe9b768fef"
+    },
+    {
+      "$oid": "62cdbc667de84ebe9b76900a"
+    },
+    {
+      "$oid": "62cdc5c07de84ebe9b76908d"
+    },
+    {
+      "$oid": "62cdfbb87de84ebe9b7691f9"
+    },
+    {
+      "$oid": "62ce044f7de84ebe9b7692a9"
+    },
+    {
+      "$oid": "62d00697cda17a49961c269f"
+    },
+    {
+      "$oid": "62d88ccdc1994f22fb7ce40f"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657649042353"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658647378880"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cdd4787de84ebe9b7690c4"
+  },
+  "name": "Dairy-Free Products",
+  "subCategory": [
+    {
+      "$oid": "62cdd4bf7de84ebe9b7690d3"
+    },
+    {
+      "$oid": "62d869cfc1994f22fb7ce39d"
+    },
+    {
+      "$oid": "62d88054c1994f22fb7ce3b6"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657656440933"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662109497666"
+    }
+  },
+  "__v": 0,
+  "status": "Deleted"
+},{
+  "_id": {
+    "$oid": "62cddf057de84ebe9b769119"
+  },
+  "name": "Dry | Baking Goods",
+  "subCategory": [
+    {
+      "$oid": "62cde0747de84ebe9b769128"
+    },
+    {
+      "$oid": "62cdebe27de84ebe9b769150"
+    },
+    {
+      "$oid": "62cdf0117de84ebe9b769169"
+    },
+    {
+      "$oid": "62cdf56e7de84ebe9b7691a4"
+    },
+    {
+      "$oid": "62f6919e97dca243cdb6f8fa"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657659141974"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662109571922"
+    }
+  },
+  "__v": 0,
+  "status": "Deleted"
+},{
+  "_id": {
+    "$oid": "62ce7fcc01d6eb43b3e602b9"
+  },
+  "name": "FRIED PACKAGE ITEMS",
+  "subCategory": [
+    {
+      "$oid": "62ce803901d6eb43b3e602c8"
+    },
+    {
+      "$oid": "62ce872d01d6eb43b3e6031d"
+    },
+    {
+      "$oid": "63023d0ba96c4b57777ccd74"
+    },
+    {
+      "$oid": "630e0a20d91932ea60c73adf"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657700300031"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661864480233"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d314ad9e22df51706afe1f"
+  },
+  "name": "BREAKFAST",
+  "subCategory": [
+    {
+      "$oid": "62d315a89e22df51706afe2e"
+    },
+    {
+      "$oid": "62dd99538f600b94609fbcb6"
+    },
+    {
+      "$oid": "62e152c65860302a76a0a2e5"
+    },
+    {
+      "$oid": "631cc8a51210eef8b539f3cd"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658000557243"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662830757318"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d5285ad7b6b158994c679c"
+  },
+  "name": "ALCOHOL BEVERAGE",
+  "subCategory": [
+    {
+      "$oid": "62d528c0d7b6b158994c67ab"
+    },
+    {
+      "$oid": "62d53070d7b6b158994c684b"
+    },
+    {
+      "$oid": "62d53284d7b6b158994c6884"
+    },
+    {
+      "$oid": "62d5339ed7b6b158994c689d"
+    },
+    {
+      "$oid": "62d53634d7b6b158994c68e3"
+    },
+    {
+      "$oid": "62d5370ad7b6b158994c68fc"
+    },
+    {
+      "$oid": "62d537fed7b6b158994c6915"
+    },
+    {
+      "$oid": "62d53be7d7b6b158994c694c"
+    },
+    {
+      "$oid": "62d54fbbd7b6b158994c69ec"
+    },
+    {
+      "$oid": "62d5571dd7b6b158994c6a41"
+    },
+    {
+      "$oid": "62d56672d7b6b158994c6a97"
+    },
+    {
+      "$oid": "62d56743d7b6b158994c6ab2"
+    },
+    {
+      "$oid": "62d57050d7b6b158994c6b35"
+    },
+    {
+      "$oid": "62d576ffd7b6b158994c6be4"
+    },
+    {
+      "$oid": "62d5b69baa24dad2e538422f"
+    },
+    {
+      "$oid": "62d5ec70c99c67ddba9288fa"
+    },
+    {
+      "$oid": "62d69c87875b37ad608ce32c"
+    },
+    {
+      "$oid": "62d69fbf875b37ad608ce345"
+    },
+    {
+      "$oid": "62d6a5e3875b37ad608ce37c"
+    },
+    {
+      "$oid": "62d7164e7ed346691537b326"
+    },
+    {
+      "$oid": "62dc65b75d8a3f8855b3be0c"
+    },
+    {
+      "$oid": "62f92da6ec11b7af1858b5b2"
+    },
+    {
+      "$oid": "630159829c614aa81b994ea4"
+    },
+    {
+      "$oid": "630248c4a96c4b57777ccedf"
+    },
+    {
+      "$oid": "63069626916bee5f2780f513"
+    },
+    {
+      "$oid": "630b7beb3a6040727b0494b8"
+    },
+    {
+      "$oid": "632980fa71b3256fc50ce8a6"
+    },
+    {
+      "$oid": "6332bbebc14cff2af0cb62e2"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658136666650"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664269291550"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d58ac7d7b6b158994c6c93"
+  },
+  "name": "Non ALCOHOL BEVERAGE",
+  "subCategory": [
+    {
+      "$oid": "62d58b34d7b6b158994c6ca2"
+    },
+    {
+      "$oid": "62d58bfed7b6b158994c6cb2"
+    },
+    {
+      "$oid": "62d58f5dd7b6b158994c6ce9"
+    },
+    {
+      "$oid": "62f7694917734506d5bb77c7"
+    },
+    {
+      "$oid": "6302372ea96c4b57777ccd03"
+    },
+    {
+      "$oid": "630246d2a96c4b57777ccec6"
+    },
+    {
+      "$oid": "630274bab8525d2e4b52b226"
+    },
+    {
+      "$oid": "6329906271b3256fc50ce9f1"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658161863196"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663668322634"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dcf215e8e9afb7ffacea5b"
+  },
+  "name": "GROCERIES",
+  "subCategory": [],
+  "status": "Deleted",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658647061566"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658832889827"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dcf33de8e9afb7ffacea8b"
+  },
+  "name": "DAIRY",
+  "subCategory": [],
+  "status": "Deleted",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658647357072"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658832922053"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dfd28ae44400b216d41642"
+  },
+  "name": "BAKERY SECTION",
+  "subCategory": [
+    {
+      "$oid": "62dfd2c5e44400b216d41650"
+    },
+    {
+      "$oid": "62dfd510e44400b216d4167a"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658835594454"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658836240746"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e033e2c42617ca32a9b9d6"
+  },
+  "name": "CULINARY ESSENCE",
+  "subCategory": [
+    {
+      "$oid": "62e034bfc42617ca32a9b9e4"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658860514761"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658860735730"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e06cff32330063641a3f8d"
+  },
+  "name": "LUBRICANT",
+  "subCategory": [],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658875135089"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662109412968"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e0ef3b607a27d8fd9e93db"
+  },
+  "name": "ALUMINIUM FOIL",
+  "subCategory": [
+    {
+      "$oid": "62e0ef86607a27d8fd9e93e9"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658908475845"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658908550663"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e0f158607a27d8fd9e9402"
+  },
+  "name": "CLING",
+  "subCategory": [
+    {
+      "$oid": "633c964c5389c1f156a9363b"
+    }
+  ],
+  "status": "Deleted",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658909016647"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664915361212"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e19d9ae9e7c9c2b33ed6ed"
+  },
+  "name": "PET FOOD",
+  "subCategory": [
+    {
+      "$oid": "62e19e12e9e7c9c2b33ed6fb"
+    },
+    {
+      "$oid": "62e1a0d0e9e7c9c2b33ed8ff"
+    },
+    {
+      "$oid": "62e1a222e9e7c9c2b33ed92e"
+    },
+    {
+      "$oid": "62e1a40ae9e7c9c2b33ed962"
+    },
+    {
+      "$oid": "62e1a4dce9e7c9c2b33ed990"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658953114691"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658954972868"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62e2ba0ab9b7f87b45a42a38"
+  },
+  "name": "HOUSEHOLD PRODUCTS",
+  "subCategory": [
+    {
+      "$oid": "62e2ba69b9b7f87b45a42a47"
+    },
+    {
+      "$oid": "62e3b738648c28bb04b2965e"
+    },
+    {
+      "$oid": "62e3bf3e648c28bb04b296f7"
+    },
+    {
+      "$oid": "62e3c6e9648c28bb04b29770"
+    },
+    {
+      "$oid": "62e3cc51648c28bb04b297eb"
+    },
+    {
+      "$oid": "62e3cd34648c28bb04b29821"
+    },
+    {
+      "$oid": "62e3d7b6648c28bb04b298b2"
+    },
+    {
+      "$oid": "62e3eaa8648c28bb04b2993a"
+    },
+    {
+      "$oid": "62e3f1ed648c28bb04b29983"
+    },
+    {
+      "$oid": "62e3fc21648c28bb04b299c6"
+    },
+    {
+      "$oid": "62e41265648c28bb04b29a43"
+    },
+    {
+      "$oid": "62e414da648c28bb04b29a5e"
+    },
+    {
+      "$oid": "62e69a35a81548d26ed28b0a"
+    },
+    {
+      "$oid": "62e6d16199f49a017a6a150a"
+    },
+    {
+      "$oid": "62e6edd399f49a017a6a169b"
+    },
+    {
+      "$oid": "62eb853fef2bd67e51edc756"
+    },
+    {
+      "$oid": "62fd2dfe118a451c16db7416"
+    },
+    {
+      "$oid": "62fe627625fa25f0a915fd9d"
+    },
+    {
+      "$oid": "6309481351048c6bef6ab1c7"
+    },
+    {
+      "$oid": "630a08bca9fd6e4275f90bee"
+    },
+    {
+      "$oid": "6313a6368b4ae5cf31ed0156"
+    },
+    {
+      "$oid": "631473518b4ae5cf31ed0518"
+    },
+    {
+      "$oid": "6314a710eb75c58a2af41e15"
+    },
+    {
+      "$oid": "6314a913eb75c58a2af41e2e"
+    },
+    {
+      "$oid": "6314f38ae9146281d58db403"
+    },
+    {
+      "$oid": "6314fbeee9146281d58db453"
+    },
+    {
+      "$oid": "6314fed3e9146281d58db496"
+    },
+    {
+      "$oid": "63261ab69e833172aa56f902"
+    },
+    {
+      "$oid": "6335ecab34da43f995b4dedb"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659025930047"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664478379903"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62eacd27523cfb2543ab205c"
+  },
+  "name": "AUTOCARE",
+  "subCategory": [
+    {
+      "$oid": "62eace9d523cfb2543ab206c"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659555111794"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1659555485240"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62eb89b8ef2bd67e51edc798"
+  },
+  "name": "CARBOHYDRATES",
+  "subCategory": [],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659603384036"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1659603384036"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f55d8900f0bb7496bc873e"
+  },
+  "name": "BAKERY SECTION",
+  "subCategory": [],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660247433372"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660247433372"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f77b4917734506d5bb784f"
+  },
+  "name": "ORAL CARE",
+  "subCategory": [
+    {
+      "$oid": "62f77bb017734506d5bb785d"
+    },
+    {
+      "$oid": "62f791986964fb240a744aea"
+    },
+    {
+      "$oid": "62fa94ad3f868abaf0872f83"
+    },
+    {
+      "$oid": "633584e9d3836d584b3d18d3"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660386121316"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664451817502"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fe0a6e46f5c0a5354cb4c4"
+  },
+  "name": "FROZEN DESSERTS",
+  "subCategory": [
+    {
+      "$oid": "62fe0abd46f5c0a5354cb4d2"
+    },
+    {
+      "$oid": "62fe211d46f5c0a5354cb77c"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660815982179"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660821789730"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fe16f546f5c0a5354cb605"
+  },
+  "name": "DRINKABLE YOGHURT",
+  "subCategory": [
+    {
+      "$oid": "62fe172646f5c0a5354cb613"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660819189860"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660819238035"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63008c137982d06e5dde08ad"
+  },
+  "name": "CAR CARE",
+  "subCategory": [
+    {
+      "$oid": "63008cdb7982d06e5dde08bb"
+    },
+    {
+      "$oid": "63008dc37982d06e5dde08d4"
+    },
+    {
+      "$oid": "63008f8a7982d06e5dde08fc"
+    },
+    {
+      "$oid": "6300912d7982d06e5dde0924"
+    },
+    {
+      "$oid": "6300934c7982d06e5dde095b"
+    },
+    {
+      "$oid": "630096957982d06e5dde0994"
+    },
+    {
+      "$oid": "6300992b7982d06e5dde09cb"
+    },
+    {
+      "$oid": "63009f597982d06e5dde0a39"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660980243259"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1660985177508"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630e42e86390c982a7f508d4"
+  },
+  "name": "BATTERIES",
+  "subCategory": [
+    {
+      "$oid": "630e43166390c982a7f508e2"
+    },
+    {
+      "$oid": "630e52c381fe048eb80d8e6e"
+    },
+    {
+      "$oid": "630fbf78bf416dd9a9ca771f"
+    },
+    {
+      "$oid": "632252cca5b7d3706b70ad25"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661879016286"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663193804688"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63107138d65888d5c6386b27"
+  },
+  "name": "STATIONERY",
+  "subCategory": [
+    {
+      "$oid": "63107178d65888d5c6386b35"
+    },
+    {
+      "$oid": "6328cb57532334247272634f"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662021944609"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663617879542"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "631243676ddfd387330b0f00"
+  },
+  "name": "FROZEN ITEMS",
+  "subCategory": [
+    {
+      "$oid": "631243ff6ddfd387330b0f0e"
+    },
+    {
+      "$oid": "633c7bb95389c1f156a934fd"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662141287756"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664908217497"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6313af918b4ae5cf31ed024a"
+  },
+  "name": "TOBACCO",
+  "subCategory": [
+    {
+      "$oid": "6313b0068b4ae5cf31ed0258"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662234513131"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662234630628"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6313f4df8b4ae5cf31ed03a7"
+  },
+  "name": "HOUSEWARE",
+  "subCategory": [
+    {
+      "$oid": "6313f6aa8b4ae5cf31ed03b5"
+    },
+    {
+      "$oid": "63146da98b4ae5cf31ed0461"
+    },
+    {
+      "$oid": "631470cd8b4ae5cf31ed04b9"
+    },
+    {
+      "$oid": "6314745e8b4ae5cf31ed0531"
+    },
+    {
+      "$oid": "631487818b4ae5cf31ed0587"
+    },
+    {
+      "$oid": "631489828b4ae5cf31ed05a0"
+    },
+    {
+      "$oid": "6314a3adeb75c58a2af41de3"
+    },
+    {
+      "$oid": "6314a526eb75c58a2af41dfc"
+    },
+    {
+      "$oid": "6314d735eb75c58a2af41f02"
+    },
+    {
+      "$oid": "6314d843eb75c58a2af41f4f"
+    },
+    {
+      "$oid": "6314dbf8eb75c58a2af41fe0"
+    },
+    {
+      "$oid": "6314e0d3eb75c58a2af42026"
+    },
+    {
+      "$oid": "6315025fe9146281d58db4df"
+    },
+    {
+      "$oid": "631506f7e9146281d58db540"
+    },
+    {
+      "$oid": "6315071ce9146281d58db550"
+    },
+    {
+      "$oid": "632e072cec2e9fb416f5583d"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662252255777"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663960876589"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63149b26eb75c58a2af41d39"
+  },
+  "name": "DOMESTIC APPLIANCES",
+  "subCategory": [
+    {
+      "$oid": "63149b76eb75c58a2af41d47"
+    },
+    {
+      "$oid": "6314f9f4e9146281d58db42b"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662294822759"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662319092949"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6314ef41e9146281d58db36b"
+  },
+  "name": "CUTLERY",
+  "subCategory": [
+    {
+      "$oid": "6314efb2e9146281d58db379"
+    },
+    {
+      "$oid": "6314f0d2e9146281d58db392"
+    },
+    {
+      "$oid": "6314f1a1e9146281d58db3ab"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1662316353421"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1662316961279"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632cac0f26132781af9f7083"
+  },
+  "name": "HOME APPLIANCES ",
+  "subCategory": [
+    {
+      "$oid": "632cacc526132781af9f7091"
+    },
+    {
+      "$oid": "632cd5122d3911be87286add"
+    },
+    {
+      "$oid": "632cded2274aa26c410451d3"
+    },
+    {
+      "$oid": "632defecfe2ba1e1956406ec"
+    },
+    {
+      "$oid": "632e041eec2e9fb416f557f1"
+    },
+    {
+      "$oid": "6332155aa5ad518545a1760f"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663872015455"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664226650481"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63306000e4d1fe3e4df17550"
+  },
+  "name": "WALL DECO | CLOCKS",
+  "subCategory": [
+    {
+      "$oid": "633060eee4d1fe3e4df17589"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664114688891"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664114926504"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6331a6c08d1c43296c80c5f0"
+  },
+  "name": "UNDER WEAR",
+  "subCategory": [
+    {
+      "$oid": "6331a8728d1c43296c80c5fe"
+    },
+    {
+      "$oid": "6331a9bc8d1c43296c80c648"
+    },
+    {
+      "$oid": "6331ad398d1c43296c80c68e"
+    },
+    {
+      "$oid": "633de8e9cc750c8360845ec0"
+    },
+    {
+      "$oid": "633df2b5c76a90ae337e9b8c"
+    },
+    {
+      "$oid": "633df2edc76a90ae337e9b9c"
+    },
+    {
+      "$oid": "633df5cdc76a90ae337e9c02"
+    },
+    {
+      "$oid": "633df926c76a90ae337e9c48"
+    }
+  ],
+  "status": "Active",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664198336160"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665005862308"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6331bb2f8d1c43296c80c75d"
+  },
+  "name": "DEELITE IMPEX DIST. CO LTD",
+  "subCategory": [],
+  "status": "Deleted",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664203567649"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664211475300"
+    }
+  },
+  "__v": 0
+}]
