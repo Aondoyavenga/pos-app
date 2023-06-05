@@ -28,7 +28,6 @@ export const createCategory = async (req, res) => {
                 return res.status(201).send({message: `${name} Deleted successful`})
                
             case 'Edit':
-                console.log('Édit')
                 await Category.findByIdAndUpdate({_id}, {name}, {upsert: true})
                 return res.status(201).send({message: `${name} ${_id ? 'Edited' : 'created'}  successful`})
             

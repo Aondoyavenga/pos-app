@@ -1,5 +1,5 @@
 import axios from "axios"
-import { setCalloverOrder, setClosedSales, setDrawer, setOrderItems, setOrders, setVoucher } from "../app/slices/orderSlice"
+import { setCalloverOrder, setClosedSales, setDrawer, setOrderItems, setOrders, setSoldProducts, setVoucher } from "../app/slices/orderSlice"
 import { setError, setIsDrawer, setIsLoading, setisPrint, setSuccess } from "../app/slices/uiSlice"
 
 export const  getAllOrders = async(dispatch) =>  {
@@ -118,6 +118,16 @@ export const getClosedSalesRecord = async (dispatch, startDate, endDate) => {
     try {
         const { status, data } = await axios.get(`/orders/close/date/${startDate}/${endDate}`)
         if(status === 200) return dispatch(setClosedSales(data))
+        
+    } catch (error) {
+        dispatch(setError(error?.response?.data?.message))
+    }
+}
+
+export const getSoldProducts = async (dispatch, startDate, endDate, product) => {
+    try {
+        const { status, data } = await axios.get(`/orders/sold/date_product/${startDate}/${endDate}/${product?product:'no'}`)
+        if(status === 200) return dispatch(setSoldProducts(data))
         
     } catch (error) {
         dispatch(setError(error?.response?.data?.message))

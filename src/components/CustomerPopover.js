@@ -1,13 +1,17 @@
 import React, { Fragment, useEffect, useState} from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
+    PlusCircleIcon,
     XIcon,
   } from '@heroicons/react/outline'
 import { useDispatch, useSelector } from 'react-redux'
-import { selectProducts, setSelectedProduct } from '../app/slices/productSlice'
+import { selectProducts, setProducts, setSelectedProduct } from '../app/slices/productSlice'
 import { selectCustomers, setSelectedCustomer } from '../app/slices/customerSlice'
-import { getAllProducts } from '../appHooks/productHook'
+import { searchProducts } from '../appHooks/productHook'
 import { IconButton } from '@mui/material'
+import ProductFeed from './ProductFeed'
+import AppPopOver from './global/AppPopOver'
+import { setSuccess } from '../app/slices/uiSlice'
   
 function classNames(...classes) {
 return classes.filter(Boolean).join(' ')
@@ -31,20 +35,32 @@ const InPutText = ({search, onClick, setSearch, placeholder}) =>{
 
 const CustomerPopover = ({search, setSearch, product, customer, setCustomer}) => {
     const dispatch = useDispatch()
-    const products = useSelector(selectProducts)
+    const [add, setAdd] = useState(false)
+    const [products, setProducts] = useState([])
     const customers = useSelector(selectCustomers)
     const [open, setOpen] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
     function handleClick() {
         setOpen(true)
        
     }
+    
     useEffect(() => {
-       getAllProducts(dispatch)
-    },[])
+        if(search?.length <= 3) return
+       searchProducts(dispatch, search, setIsLoading, setProducts)
+    },[search])
 
     return (
         <>
+
+            <AppPopOver
+                open={add}
+                setOpen={setAdd}
+                title='Add new product'
+            >
+                <ProductFeed cashier />
+            </AppPopOver>
         
             <Popover.Group>
             {
@@ -76,7 +92,23 @@ const CustomerPopover = ({search, setSearch, product, customer, setCustomer}) =>
                         <div
                             className='flex bg-white justify-between items-center px-4'
                         >
-                            <p>{!search && !product ? 'Customer List' : 'Product List'}</p>
+                            {
+                            !search && !product ? <p>Customer List</p> : 
+                            
+                            <p>
+                                Product List
+                                
+                                <IconButton
+                                    onClick={() =>(
+                                        setAdd(!add),
+                                        dispatch(setSelectedProduct(null))
+                                    )}
+                                >
+                                    <PlusCircleIcon className='w-6' />
+                                </IconButton>
+                            </p>
+                            
+                            }
                             <IconButton
                                 onClick={() =>setOpen(false)}
                             >
@@ -90,7 +122,7 @@ const CustomerPopover = ({search, setSearch, product, customer, setCustomer}) =>
 
                                     {
                                         products?.length > 0 &&
-                                        products?.filter(item => {
+                                        products?.products?.filter(item => {
                                             if(search === '') {
                                                 return item
                                             }else if(item.productName?.toLowerCase()?.includes(search?.toLowerCase())){
@@ -113,7 +145,10 @@ const CustomerPopover = ({search, setSearch, product, customer, setCustomer}) =>
                                             </div>
                                         ))
                                     }
-                                    
+                                    {
+                                        isLoading &&
+                                        <p>Searching...</p>
+                                    }
                                 </div>
                             :
                             <div className="relative grid gap-2 bg-white px-5 py-6 sm:gap-8 sm:p-8">

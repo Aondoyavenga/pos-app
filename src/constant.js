@@ -1,1 +1,1 @@
-export const DOMAIN = 'http://127.0.0.1:1000/'
+export const DOMAIN = process.env.REACT_APP_BASE_URL

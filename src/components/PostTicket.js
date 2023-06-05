@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { selectCustomers, selectSelectedCustomer, setSelectedCustomer } from '../app/slices/customerSlice'
 import CustomerPopover from './CustomerPopover'
 import axios from 'axios'
-import { selectProducts, selectSelectedProduct, setSelectedProduct } from '../app/slices/productSlice'
+import { selectProducts, selectSelectedProduct, setProducts, setSelectedProduct } from '../app/slices/productSlice'
 import { selectUser } from '../app/slices/userSlice'
 import Currency from 'react-currency-formatter'
 import { selectError, selectIsDrawer, selectIsLoading, selectIsPrint, selectSuccess, setError, setIsDrawer, setIsLoading, setisPrint, setSuccess } from '../app/slices/uiSlice'
@@ -111,6 +111,7 @@ const PostTicket = () => {
         return parseInt(total)
     }
     const renderAmount = (pro, qty) => {
+       
         const proExist = products && products.find((prop) => prop._id == pro);
        
         const total = proExist && data.orderType == 'PURCHASE' ? parseInt(proExist.purchasePrice) * parseInt(qty) : parseInt(proExist.salesPrice) * parseInt(qty);
@@ -230,7 +231,8 @@ const PostTicket = () => {
                 dispatch(setIsLoading(false)),
                 setOpen(true),
                 setPay(false),
-                getAllOrders(dispatch)
+                getAllOrders(dispatch),
+                handleClear()
             )
             dispatch(setError(result?.message))
             dispatch(setIsLoading(false))
@@ -260,7 +262,7 @@ const PostTicket = () => {
     useEffect( () => {
         getAllCustomers(dispatch)
         
-    }, [])
+    }, [success])
 
     useEffect(() => {
        if(product) {
@@ -379,9 +381,11 @@ const PostTicket = () => {
         })
     }, [paymentform])
 
-    useEffect(() => {
-        handleClear()
-    }, [success])
+    // useEffect(() => {
+    //     if(!success) return
+    //     if(success && )
+    //     handleClear()
+    // }, [success])
     const id = ( Math.random(new Date().getTime()))
 
     useEffect(() =>{
@@ -392,6 +396,7 @@ const PostTicket = () => {
             orderOn: new Date(),
             orderId: data?.orderId !=='' ? data?.orderId : `${id?.toString()?.split('.')[1]?.substring(0,8)}`
         }) 
+        dispatch(setProducts([]))
     }, [])
 
     
@@ -694,13 +699,13 @@ const PostTicket = () => {
                         <p className='font-semibold' >Thank You For Doing Business With Us</p>
                     </div>
                     
-                    <Typography variant='caption' className='font-semibold text-red-700'>Parvic Supermarkets </Typography>
+                    <Typography variant='caption' className='font-semibold text-red-700'>Diocese of Ika</Typography>
                     {/* <Typography variant='caption'>Abdule Plaza, Off Tasha Bwari Express Way,</Typography> */}
-                    <Typography variant='caption'>Abdul Plaza, Plot BDS 01 DUT</Typography>
+                    <Typography variant='caption'>2 Ebuh Street, Agbor Delta State</Typography>
 
                     {/* <Typography variant='caption'>Off Sokale Roundabout Dutse, FCT Abuja.</Typography> */}
-                    <Typography variant='caption'>+234 916 2220 163, </Typography>
-                    <Typography variant='caption'>info@parvicsupermartkets.net </Typography>
+                    <Typography variant='caption'>+234 807 5343 153, </Typography>
+                    <Typography variant='caption'>info@dioceseofika.org.ng </Typography>
                 </div>
                 <div className='w-full flex flex-col justify-center items-center'>
                     <div className='text-white'></div>
@@ -832,7 +837,7 @@ const PostTicket = () => {
                     '
                 >
                     <CashIcon className='h-6 w-6' />
-                    <p> {isLoading ? 'Paying...': 'Pay'} </p>
+                    <p> {isLoading ? 'Paying...': 'Pay'}</p>
                 </button>
                 <button 
                     disabled={callover?.order ? true : false }

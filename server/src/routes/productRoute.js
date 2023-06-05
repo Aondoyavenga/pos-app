@@ -7,6 +7,7 @@ const router = express.Router()
 router
     .get('/', getAllProducts)
     .post('/', createProduct)
+    .get('/search/:query')
     .get('/:page/:limit', getAllProductsPagenet)
     .post('/order', getProductOrderList)
 

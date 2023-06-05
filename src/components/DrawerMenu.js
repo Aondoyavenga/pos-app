@@ -50,6 +50,12 @@ const DrawerMenu = () => {
                         icon={<ClockIcon className='h-6 text-pos_color'  />}
                     />
 
+                    <DrawerList 
+                        title='Sold'
+                        func={ () =>navigate('/sales_report')}
+                        icon={<ClockIcon className='h-6 text-pos_color'  />}
+                    />
+
                     {
                         user?.role?.manager == true ?
                     <Fragment>

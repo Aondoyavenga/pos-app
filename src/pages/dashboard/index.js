@@ -14,7 +14,7 @@ const Dashboard = () => {
     const user = useSelector(selectUser)
     const success = useSelector(selectSuccess)
     useEffect(() => {
-      
+       
         getAllProducts(dispatch)
         getAllCategorys(dispatch)
         getAllOrders(dispatch)

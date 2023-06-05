@@ -16,17 +16,16 @@ const ProductFeed = () => {
    
     return (
         <Fragment>
-            <main className='grid grid-cols-1 md:grid-cols-2
-            md: max-w-3xl xl:grid-cols-7 xl:max-w-full mx-auto  px-0 h-[85%]'>
-            <div className='hidden xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0 h-full bg-white'
+            <main className='flex  mx-auto  px-0 h-[85%]'>
+            <div className='xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0  bg-white'
             >
                 <DrawerMenu />
                 {/* <PostingAnalysis /> */}
             </div>
            
-            <section className="col-span-6 overflow-y-auto pb-20 h-[100%] overflow-auto scrollbar-none">
+            <section className="flex-1 overflow-y-auto pb-20 h-[100%] overflow-auto scrollbar-none">
                 <div className='flex items-center flex-col justify-center w-full
-                    py-2
+                    py-2 text-xs
                 '
                 >
                     <h1
@@ -59,7 +58,7 @@ const ProductFeed = () => {
                             >Paid <BadgeCheckIcon className='w-6'/> </button>
                         </div>
                     </section>
-                   <main className=' transition-all duration-150 md:w-[95%] sm:w-[95%] mx-auto px-2 py-2 mt-4'>
+                   <main className='transition-all duration-150 text-xs md:w-[95%] sm:w-[95%] mx-auto px-2 py-2 mt-4'>
                         {
                             products &&
                             <Fragment>
@@ -79,6 +78,7 @@ const ProductFeed = () => {
                             </Fragment>
                             
                         }
+                        <div className='md:py-48 mb-4' />
                    </main>
                 </div>
                 

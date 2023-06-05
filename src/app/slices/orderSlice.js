@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
+    sold: [],
     items: [],
     item: null,
     drawer: null,
@@ -42,6 +43,9 @@ const orderSlice = createSlice({
         },
         setClosedSales: (state, action) => {
             state.closedSales = action.payload
+        },
+        setSoldProducts: (state, action) => {
+            state.sold = action.payload
         }
 
     }
@@ -56,11 +60,14 @@ export const {
     setTotalSummary,
     setSelectedOrder, 
     setCalloverOrder,
-    setClosedSales
+    setClosedSales,
+    setSoldProducts
 } = orderSlice.actions
 
 export const selectOrders = state => state.order.items 
 export const selectDrawer = state => state.order.drawer
+export const selectSoldProducts = state => state.order.sold
+
 export const selectVoucher = state => state.order.receipt
 export const selectPrinData = state => state.order.printData
 export const selectSelectedOrder = state => state.order.item

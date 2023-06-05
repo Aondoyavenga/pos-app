@@ -302,19 +302,17 @@ const SalesReceipt = () => {
                         Purchase please
                     </Typography>
                     <Typography variant='subtitle1' className='text-[16px]'>
-                        Phone Number: 09162220163, 
+                        Phone Number: +234 807 5343 153, 
                     </Typography>
                     <Typography variant='subtitle1' className='text-[16px]'>
-                        Email: info@parvicsupermartkets.net
+                        Email: info@dioceseofika.org.ng
                     </Typography>
                     <Typography variant='subtitle1' className='text-[16px]'>
-                        www.parvicsupermarkets.net
+                        www.dioceseofika.org.ng
                     </Typography>
                     <Typography variant='subtitle1' className='font-bold'>
                        <Barcode 
-                            
-                                height={50}
-                            
+                            height={50}
                             value={`CA${voucher?.order?.orderId}`}
                        />
                     </Typography>

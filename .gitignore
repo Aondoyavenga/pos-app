@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/ika-server/node_modules
+/server/node_modules
 /.pnp
 .pnp.js
 

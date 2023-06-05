@@ -7,10 +7,12 @@ import {useNavigate} from 'react-router-dom'
 import { DOMAIN } from '../constant'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { getSession } from '../appHooks/staffHook'
+import { selectIsLoading, setIsLoading } from '../app/slices/uiSlice'
 
 const Home = ({user}) => {
     const dispatch = useDispatch()
     const router = useNavigate()
+    const isLoading = useSelector(selectIsLoading)
     const [Error, setError] = useState()
     const [data, setData] = useState({
         userName: '',
@@ -20,14 +22,18 @@ const Home = ({user}) => {
     const hanldeLogIn = (e) =>{
         setError(null)
         e.preventDefault()
+        dispatch(setIsLoading(true))
             axios.post('/user/login', data)
             .then(result =>{
-                console.log(result.data)
+               
                 AsyncStorage.setItem('token', result.data?.token)
                 dispatch(setUser(result.data))
                 router('/dashboard')
+                dispatch(setIsLoading(false))
             })
             .catch(error =>{
+                dispatch(setIsLoading(false))
+
                if(error) return  setError(error.response.data.message)
             //    console.warn(error.response)
             })
@@ -88,17 +94,18 @@ const Home = ({user}) => {
         {/* <PageHead 
             title='POS | Software'
         /> */}
+       
         <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
             <button className="add-button">Add to home screen</button>
             <div className="max-w-md w-full space-y-4 shadow rounded p-3">
-                <div> 
+                <div className='py-8'> 
                     <p className='flex items-center justify-center'>
                         <img 
                             src={`${DOMAIN}public/static/logo.png`}
                             
                             style={{
-                                width: 240,
-                                height: 240,
+                                width: 100,
+                                height: 100,
                                 objectFit: 'contain'
                             }}
                         />
@@ -178,6 +185,7 @@ const Home = ({user}) => {
                     
                         <button
                             type="submit"
+                            disabled={isLoading}
                             onClick={(e) =>hanldeLogIn(e)}
                             // onClick={() =>router.push('/dashboard')}
                             className="group relative w-full flex justify-center py-2 px-4 border border-transparent
@@ -186,7 +194,7 @@ const Home = ({user}) => {
                             <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                             <LockClosedIcon className="h-5 w-5 text-white group-hover:text-ssl_color-green" aria-hidden="true" />
                             </span>
-                            Sign in
+                            {isLoading ? 'Processing...' : 'Sign in'}
                         </button>
                     </div>
                 </form>

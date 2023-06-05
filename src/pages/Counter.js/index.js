@@ -40,16 +40,16 @@ const Counter = () => {
            
             <Header /> 
             
-            <main className='grid grid-cols-1 md:grid-cols-2
+            <main className='flex flex-row grid-cols-1 md:grid-cols-2
                 md: max-w-3xl xl:grid-cols-7 xl:max-w-full mx-auto shadow-md px-0 h-full overflow-hidden'>
-                <div className='hidden xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0 h-full bg-white'
+                <div className='xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0 h-full bg-white'
                 >
                     <DrawerMenu />
                     {/* <PostingAnalysis /> */}
                 </div>
             
-                <section className="col-span-6 overflow-y-auto pb-20 h-[100%] overflow-auto scrollbar-none">
-                   <div className='flex w-[40%] mx-auto py-4 justify-between'>
+                <section className="flex-1 overflow-y-auto pb-20 h-[100%] overflow-auto scrollbar-none">
+                   <div className='flex md:w-[90%] lg:w-[40%] mx-auto py-4 justify-between'>
                         <div>
                             <input 
                                 type="date" name="" id=""

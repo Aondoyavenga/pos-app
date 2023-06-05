@@ -13,6 +13,7 @@ import Products from './pages/products';
 import Reports from './pages/reports';
 import Staff from './pages/Staff';
 import ProductOrderList from './pages/order'
+import SalesReport from './pages/sales_report';
 
 const AppRoute = () => {
     const token = useSelector(selectToken)
@@ -31,6 +32,8 @@ const AppRoute = () => {
                 <Route path="/staff" element={<Staff />} />
                 <Route path="/staff" element={<Staff />} />
                 <Route path="/reports" element={<Reports />} />
+                <Route path="/sales_report" element={<SalesReport />} />
+
                 <Route path="/orderlist" element={<ProductOrderList />} />
                 <Route path="/customer" element={<Customer />} />
                 <Route path='/categories' element={<Categories />} />

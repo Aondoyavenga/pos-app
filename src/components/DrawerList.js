@@ -8,33 +8,35 @@ import ListItemText from '@mui/material/ListItemText';
 
 const DrawerList = ({ func,icon, title }) => {
   return (
-    <Box sx={{ width: '100%', maxWidth: 360,}}
-        className='bg-white text-pos_color'
-    >
-      <nav aria-label="main mailbox folders">
-        {
-           
-            <div
-                onClick={() =>func()}
-                className='hover:text-pos_color-green'
-            >
-                <ListItem disablePadding>
-                    <ListItemButton>
-                    <ListItemIcon>
-                        {icon}
-                    </ListItemIcon>
-                    <ListItemText primary={
-                        <p className='text-sm'>{title}</p>
-                    } />
-                    </ListItemButton>
-                </ListItem>
-            </div>
+        <Box sx={{ width: '100%', maxWidth: 360,}}
+            className='bg-white text-pos_color'
+        >
+        <nav aria-label="main mailbox folders">
+            {
+            
+                <div
+                    onClick={() =>func()}
+                    className='hover:text-pos_color-green'
+                >
+                    <ListItem disablePadding>
+                        <ListItemButton>
+                        <ListItemIcon>
+                            {icon}
+                        </ListItemIcon>
+                        <ListItemText 
+                        className='md:-ml-5'
+                        primary={
+                            <p className='text-xs'>{title}</p>
+                        } />
+                        </ListItemButton>
+                    </ListItem>
+                </div>
+            
+            }
+        </nav>
         
-        }
-      </nav>
-     
-    </Box>
-  );
+        </Box>
+    );
 }
 
 export default DrawerList

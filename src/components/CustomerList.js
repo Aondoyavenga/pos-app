@@ -25,14 +25,14 @@ const CustomerList = ({setAction}) => {
                 <table
                     className='w-full table stripped'
                 >
-                    <thead>
-                        <th className='text-sm'>S/N</th>
-                        <th className='text-sm'>Name's</th>
-                        <th className='text-sm'>Phone Number</th>
-                        <th className='text-sm'>Status</th>
-                        <th className='text-sm'></th>
+                    <thead className='text-xs text-gray-500'>
+                        <th>S/N</th>
+                        <th>Name's</th>
+                        <th>Phone Number</th>
+                        <th>Status</th>
+                        <th></th>
                     </thead>
-                    <tbody>
+                    <tbody className='text-xs'>
                         {
                             customers?.map((item, index) => {
                                 const { status, firstName, lastName, phoneNumber } = item
@@ -43,12 +43,12 @@ const CustomerList = ({setAction}) => {
                                         <tr
                                             className={index % 2 ? 'bg-gray-100': 'bg-white'}
                                         >
-                                            <td className='text-center text-sm cursor-pointer text-pos_color-green'> {index+1} </td>
-                                            <td className='text-center text-sm cursor-pointer'> {`${firstName} ${lastName}`} </td>
-                                            <td className='text-center text-sm cursor-pointer'> {phoneNumber} </td>
-                                            <td className='text-center text-sm cursor-pointer'> {status} </td>
+                                            <td className='text-center cursor-pointer text-pos_color-green'> {index+1} </td>
+                                            <td className='text-center cursor-pointer'> {`${firstName} ${lastName}`} </td>
+                                            <td className='text-center cursor-pointer'> {phoneNumber} </td>
+                                            <td className='text-center cursor-pointer'> {status} </td>
                                             
-                                            <td className='text-center text-sm cursor-pointer'>
+                                            <td className='text-center cursor-pointer'>
                                                 <div className='flex gap-4'>
                                                     <IconButton
                                                         size='small'
@@ -58,7 +58,7 @@ const CustomerList = ({setAction}) => {
                                                         )}
                                                     >
                                                         <MinusCircleIcon
-                                                            className='w-6'
+                                                            className='w-5'
                                                         />
                                                     </IconButton>
                                                     <IconButton
@@ -69,7 +69,7 @@ const CustomerList = ({setAction}) => {
                                                         )}
                                                     >
                                                         <PencilAltIcon 
-                                                            className='w-6'
+                                                            className='w-5'
                                                         />
                                                     </IconButton>
                                                 </div>

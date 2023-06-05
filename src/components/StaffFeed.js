@@ -60,9 +60,9 @@ const StaffFeed = () => {
     }
     return (
         <Fragment>
-            <main className='grid grid-cols-1 md:grid-cols-2
-            md: max-w-3xl xl:grid-cols-7 xl:max-w-[95%] mx-auto shadow-md px-0 h-[85%]'>
-            <div className='hidden xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0 h-full bg-white'
+            <main className='flex flex-row  grid-cols-1 md:grid-cols-2
+            md:max-w-3xl xl:grid-cols-7 xl:max-w-[95%] mx-auto shadow-md px-0 h-[85%]'>
+            <div className=' xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0 h-full bg-white'
             >
                 <DrawerMenu />
                
@@ -77,11 +77,11 @@ const StaffFeed = () => {
                         className='text-pos_color font-bold text-2xl'
                    >POINT OF SALE STAFF</h1>
                 </div>
-                <main className='grid grid-cols-8 md:grid-cols-8 h-full'>
+                <main className='flex md:flex-col lg:flex-row  h-full'>
                     
-                     <div className='hidden xl:inline-grid md:col-span-6
+                     <div className='flex
                         top-2 sticky overflow-auto scrollbar-none flex-1'>
-                        <section>
+                        <section className='w-full'>
                             <div
                                 className='py-2 px-3'
                             >
@@ -89,7 +89,7 @@ const StaffFeed = () => {
                             </div>
                         </section>
                     </div>
-                    <div className='hidden xl:inline-grid md:col-span-2
+                    <div className='lg:flex-[0.3] md:bg-gray-100 lg:bg-none
                         top-2 sticky overflow-auto scrollbar-none'>
                         <div className='flex-1 w-full  
                             scrollbar-none h-full flex items-center justify-center px-2'
@@ -254,10 +254,9 @@ const StaffFeed = () => {
                         </div>
                     </div>
                 </main>
-                
+                <div className='md:py-48 md:mb-4' />
             </section>
 
-           
         </main>
         </Fragment>
     )

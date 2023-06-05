@@ -17,7 +17,7 @@ const CategoryList = ({setAction}) => {
                 className='shadow p-2 mt-2 bg-gray-50'
             >
                 <h3
-                    className='text-xl font-semibold text-pos_color'
+                    className='text-lg my-2 font-semibold text-pos_color'
                 > Category List </h3>
                 {
                     categorys?.length > 0 &&
@@ -25,12 +25,12 @@ const CategoryList = ({setAction}) => {
                 <table
                     className='w-full table stripped'
                 >
-                    <thead>
-                        <th className='text-sm'>S/N</th>
-                        <th className='text-sm'>Name's</th>
-                        <th className='text-sm'>Actions</th>
+                    <thead className='text-xs text-gray-500'>
+                        <th>S/N</th>
+                        <th>Name's</th>
+                        <th>Actions</th>
                     </thead>
-                    <tbody>
+                    <tbody className='text-xs'>
                         {
                             categorys?.map((item, index) => {
                                 const { status, name, lastName, phoneNumber } = item
@@ -41,11 +41,11 @@ const CategoryList = ({setAction}) => {
                                         <tr
                                             className={index % 2 ? 'bg-gray-100': 'bg-white'}
                                         >
-                                            <td className='text-center text-sm cursor-pointer text-pos_color-green'> {index+1} </td>
-                                            <td className='text-center text-sm cursor-pointer'> {`${name}`} </td>
+                                            <td className='text-center cursor-pointer text-pos_color-green'> {index+1} </td>
+                                            <td className='text-center cursor-pointer'> {`${name}`} </td>
                                             
                                             
-                                            <td className='text-center text-sm cursor-pointer'>
+                                            <td className='text-center cursor-pointer'>
                                                 <div className='flex gap-4'>
                                                     <IconButton
                                                         size='small'
@@ -55,7 +55,7 @@ const CategoryList = ({setAction}) => {
                                                         )}
                                                     >
                                                         <MinusCircleIcon
-                                                            className='w-6'
+                                                            className='w-4'
                                                         />
                                                     </IconButton>
                                                     <IconButton
@@ -66,7 +66,7 @@ const CategoryList = ({setAction}) => {
                                                         )}
                                                     >
                                                         <PencilAltIcon 
-                                                            className='w-6'
+                                                            className='w-4'
                                                         />
                                                     </IconButton>
                                                 </div>

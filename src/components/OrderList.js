@@ -64,20 +64,20 @@ const OrderList = ({title}) => {
                         ref={printTableREf}
                         className='w-full table stripped'
                     >
-                        <thead>
-                            <th className='text-sm'>S/N</th>
-                            <th className='text-sm'>Order ID</th>
-                            <th className='text-sm'>Order On</th>
-                            <th className='text-sm'>Type</th>
-                            <th className='text-sm'>Status</th>
-                            <th className='text-sm'>Customer/Vendor</th>
-                            <th className='text-sm'>User</th>
-                            <th className='text-sm'>Amount (<strike>N</strike>)</th>
-                            <th className='text-sm'>Total Paid (<strike>N</strike>)</th>
-                            <th className='text-sm'>Balance (<strike>N</strike>)</th>
-                            <th className='text-sm'></th>
+                        <thead className='text-xs text-gray-500'>
+                            <th>S/N</th>
+                            <th>Order ID</th>
+                            <th>Order On</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Customer/Vendor</th>
+                            <th>User</th>
+                            <th>Amount (<strike>N</strike>)</th>
+                            <th>Total Paid (<strike>N</strike>)</th>
+                            <th>Balance (<strike>N</strike>)</th>
+                            <th></th>
                         </thead>
-                        <tbody>
+                        <tbody className='text-xs'>
                             {
                                 orders?.filter(item =>{
                                     if(search == '') {
@@ -105,24 +105,24 @@ const OrderList = ({title}) => {
                                             <tr
                                                 className={index % 2 ? 'bg-gray-100': 'bg-white'}
                                             >
-                                                <td className='text-center text-sm cursor-pointer text-pos_color-green'> {index+1} </td>
-                                                <td className='text-center text-sm cursor-pointer'> {orderId} </td>
-                                                <td className='text-center text-sm cursor-pointer'> {new Date(orderOn).toLocaleDateString()} </td>
-                                                <td className='text-center text-sm cursor-pointer'> {orderType} </td>
+                                                <td className='text-center  cursor-pointer text-pos_color-green'> {index+1} </td>
+                                                <td className='text-center  cursor-pointer'> {orderId} </td>
+                                                <td className='text-center  cursor-pointer'> {new Date(orderOn).toLocaleDateString()} </td>
+                                                <td className='text-center  cursor-pointer'> {orderType} </td>
                                                 {
-                                                    status=='Paid' ? <td className='text-center text-sm cursor-pointer'> {status} </td>:
-                                                    <td className='text-center text-sm cursor-pointer
+                                                    status=='Paid' ? <td className='text-center  cursor-pointer'> {status} </td>:
+                                                    <td className='text-center  cursor-pointer
                                                     hover:text-pos_color-green
                                                 '
                                                     onClick={() => handleGetItems(orderId, dispatch, setOpen, items)}
                                                 > {status} </td>
                                                 }
-                                                <td className='text-sm cursor-pointer'> {`${customerRef?.firstName} ${customerRef?.lastName}`} </td>
-                                                <td className='text-sm cursor-pointer'> {`${userRef?.firstName} ${userRef?.lastName}`} </td>
-                                                <td className='text-center text-sm cursor-pointer text-pos_color-green'> {amount?.toLocaleString()} </td>
-                                                <td className='text-center text-sm cursor-pointer text-red-500'> {totalPaid?.toLocaleString()} </td>
-                                                <td className='text-center text-sm cursor-pointer text-pos_color-green'> {(amount > totalPaid ? amount - totalPaid: totalPaid - amount)?.toLocaleString()} </td>
-                                                <td className='text-center text-sm cursor-pointer hide-on-print'>
+                                                <td className=' cursor-pointer'> {`${customerRef?.firstName} ${customerRef?.lastName}`} </td>
+                                                <td className=' cursor-pointer'> {`${userRef?.firstName} ${userRef?.lastName}`} </td>
+                                                <td className='text-center  cursor-pointer text-pos_color-green'> {amount?.toLocaleString()} </td>
+                                                <td className='text-center  cursor-pointer text-red-500'> {totalPaid?.toLocaleString()} </td>
+                                                <td className='text-center  cursor-pointer text-pos_color-green'> {(amount > totalPaid ? amount - totalPaid: totalPaid - amount)?.toLocaleString()} </td>
+                                                <td className='text-center  cursor-pointer hide-on-print'>
                                                     <div className='flex gap-2 items-center'>
                                                         <IconButton
                                                             size='small'

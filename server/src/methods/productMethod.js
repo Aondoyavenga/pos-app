@@ -13,6 +13,22 @@ export const getAllProducts = async (req, res) => {
     }
 }
 
+export const searchAllProducts = async (req, res) => {
+    try {
+        const {query} = req.params
+        const products = await Product.find({$or: [
+            {status: {$ne: 'Deleted'}}, 
+            {SKU_UPC: {$regex: query}},
+            {productName: {$regex: query}}]}).select({__v: 0, updatedAt: 0})
+        .populate('category', {__v: 0, updatedAt: 0, subCategory: 0})
+        .populate('subCategory', {__v: 0, updatedAt: 0, productRef: 0})
+        .sort({updatedAt: -1})
+        res.status(200).json(products)
+    } catch (error) {
+        res.status(404).send({message: `${error.message} Internal Server Error`})
+    }
+}
+
 export const getAllProductsPagenet = async (req, res) => {
     try {
         const { page, limit } = req.params
@@ -47,14 +63,12 @@ export const getProductOrderList  = async (req, res) => {
             .populate('category', {__v: 0, updatedAt: 0, subCategory: 0})
             .populate('subCategory', {__v: 0, updatedAt: 0, productRef: 0})
 
-            console.log(orderlist[0])
             return res.send(orderlist)
         }
         const orderlist = await Product.find({})
         .sort({updatedAt: -1})
         .populate('category', {__v: 0, updatedAt: 0, subCategory: 0})
         .populate('subCategory', {__v: 0, updatedAt: 0, productRef: 0})
-        console.log(orderlist)
         res.send(orderlist)
     } catch (error) {
         res.status(404).send({message: `${error.message} Internal Server Error`})

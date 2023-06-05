@@ -260,6 +260,37 @@ export const getOrderItems = async(req, res) => {
     }
 }
 
+export const getOrderItemsByDate_Product = async(req, res) => {
+    try {
+        const {from, to, product} = req.params
+        if(from && to && product?.length >= 20){
+            const items = await Orderitem.find({productRef:product, orderType: 'SALE', createdAt: {
+                $gte: new Date(from).toISOString(),
+                $lt: new Date(to).toISOString()
+            }})
+            
+            .select({__v: 0, updatedAt: 0})
+            .populate('productRef', {__v: 0, updatedAt: 0})
+            return res.send(items)
+        }
+
+        if(from && to && product?.length == 2){
+            const items = await Orderitem.find({ orderType: 'SALE',  createdAt: {
+                $gte: new Date(from).toISOString(),
+                $lt: new Date(to).toISOString()
+            }})
+            
+            .select({__v: 0, updatedAt: 0})
+            .populate('productRef', {__v: 0, updatedAt: 0})
+            return res.send(items)
+        }
+        res.status(404).send({message: `Invalid request try again`})
+       
+    } catch (error) {
+        res.status(404).send({message: `Internal Server Error`})
+    }
+}
+
 const handleUpdateProduct = async(id, type, qty) => {
     const product = await Product.findById(id)
     return await product.updateQty(id, type, qty)

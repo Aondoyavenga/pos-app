@@ -22,6 +22,26 @@ export const getAllProducts = async (dispatch, page, limit) => {
     }
 }
 
+
+export const searchProducts = async (dispatch, query, setIsLoading, setSearchResult) => {
+    try {
+        if(!query?.length > 3) return
+        setSearchResult(null)
+        setIsLoading(true)
+        const { data, status } = await axios.get(`/product/search/${query}`)
+       
+        setIsLoading(false)
+        if(status == 200) return setSearchResult(data)
+        return dispatch(setError(data.message))
+       
+    } catch (error) {
+        setIsLoading(false)
+        setSearchResult(null)
+
+        // if(error) return dispatch(setError(error.response?.data?.message))
+    }
+}
+
 export const getCategories = async (dispatch) => {
     try {
         const {data} = await axios.get('/category')

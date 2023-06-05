@@ -14,7 +14,7 @@ import { useLayoutEffect } from 'react'
 import { getAllProducts } from '../appHooks/productHook'
 import { selectToken } from '../app/slices/userSlice'
 
-const ProductFeed = () => {
+const ProductFeed = ({cashier}) => {
     const dispatch = useDispatch()
     const Error = useSelector(selectError)
     const success = useSelector(selectSuccess)
@@ -67,6 +67,10 @@ const ProductFeed = () => {
     }
 
     const handlePost = async() => {
+
+        setTimeout(() => {
+            dispatch(setSuccess(null))
+        }, 7000);
         try {
             dispatch(setError(null))
             dispatch(setSuccess(null))
@@ -106,6 +110,10 @@ const ProductFeed = () => {
         
         setSubcategorys(subcategorys1.data)
         if(!token) return
+        if(cashier) {
+            return getAllProducts(dispatch)
+        }
+
         getAllProducts(dispatch, page, limit )
     }
 
@@ -116,7 +124,9 @@ const ProductFeed = () => {
 
     useEffect(() => {
         const { page, limit } = query
-        getAllProducts(dispatch, page, limit )
+        if(!cashier) {
+            getAllProducts(dispatch, page, limit )
+        }
     }, [query])
     
 
@@ -153,27 +163,35 @@ const ProductFeed = () => {
     }, [])
     return (
         <Fragment>
-            <main className='grid grid-cols-1 md:grid-cols-2
-            md: max-w-3xl xl:grid-cols-7 xl:max-w-full mx-auto shadow-md px-0 h-[89%] overflow-hidden'>
-            <div className='hidden xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0 h-full bg-white'
-            >
-                <DrawerMenu />
-                {/* <PostingAnalysis /> */}
-            </div>
+            <main className='flex flex-row  mx-auto shadow-md px-0 h-[89%] overflow-hidden'>
+            
+            {
+                !cashier &&
+                <div className='xl:inline-grid col-span-1 overflow-auto scrollbar-none px-0 h-full bg-white'
+                >
+                    <DrawerMenu />
+                    {/* <PostingAnalysis /> */}
+                </div>
+            }
            
-            <section className="col-span-6 overflow-y-auto pb-20 h-[100%] overflow-auto scrollbar-none">
-                <div className='flex items-center flex-col justify-center w-full
+            <section className={`flex-1 overflow-y-auto pb-20 scrollbar-none`}>
+                <div className='flex items-center flex-col justify-center w-full text-xs
                     py-2
                 '
                 >
-                    <h1
-                        className='text-pos_color font-bold text-2xl'
-                    >PRODUCTS</h1>
+                    {
+                        !cashier &&
+                        <h1
+                            className='text-pos_color font-bold text-lg'
+                        >PRODUCTS</h1>
+                    }
                     {
 
                         add == 'product' &&
                    
-                        <main className='shadow md:w-[95%] sm:w-[95%] mx-auto px-2 py-2 mt-4 transition-all duration-150'>
+                        <main className={`
+                            ${!cashier ? 'shadow' : ''} md:w-[95%] sm:w-[95%] mx-auto px-2 py-2 transition-all duration-150
+                        `}>
                         {
                             Error &&
                             <div
@@ -201,7 +219,7 @@ const ProductFeed = () => {
                                         value={body.productName}
                                         onChange={e =>handleChange(e)}
                                         className='bg-gray-50 block w-full px-2 
-                                        sm:text-sm rounded-md focus:ring-black focus:border-black my-5'
+                                        text-xs rounded-md focus:ring-black focus:border-black my-2'
                                     />
                                 </div>
                                 <div className="flex flex-1 flex-col">
@@ -212,7 +230,7 @@ const ProductFeed = () => {
                                         placeholder='SKU/UPC'
                                         onChange={e =>handleChange(e)}
                                         className='bg-gray-50 block w-full px-2 
-                                        sm:text-sm rounded-md focus:ring-black focus:border-black my-5'
+                                        text-xs rounded-md focus:ring-black focus:border-black my-2'
                                     />
                                 </div>
                             
@@ -230,14 +248,14 @@ const ProductFeed = () => {
                                                 size='small'
                                                 onClick={() =>setIsAdd('category')}
                                             >
-                                                <PlusCircleIcon className='w-6 hover:text-pos_color-green' />
+                                                <PlusCircleIcon className='w-5 hover:text-pos_color-green' />
                                             </IconButton>
                                             :
                                             <IconButton
                                                 size='small'
                                                 onClick={() =>setIsAdd('')}
                                             >
-                                                <XCircleIcon className='w-6 hover:text-pos_color-green' />
+                                                <XCircleIcon className='w-5 hover:text-pos_color-green' />
                                             </IconButton>
                                         }
                                         {
@@ -248,7 +266,7 @@ const ProductFeed = () => {
                                                     placeholder='Category'
                                                     onChange={e =>setCatbody(e.target.value)}
                                                     className='bg-gray-50 block w-full 
-                                                    sm:text-sm rounded-md focus:ring-black focus:border-black my-5'
+                                                    text-xs rounded-md focus:ring-black focus:border-black my-2'
                                                 />
                                                 <Button
                                                     disabled={isLoading}
@@ -265,7 +283,7 @@ const ProductFeed = () => {
                                             value={body.category}
                                             onChange={e =>handleChange(e)}
                                             className='bg-gray-50 block w-full px-2 
-                                            sm:text-sm rounded-md focus:ring-black focus:border-black my-3'
+                                            text-xs rounded-md focus:ring-black focus:border-black my-3'
                                         >
                                             <option value="">Product Category</option>
                                             {
@@ -296,14 +314,14 @@ const ProductFeed = () => {
                                                 size='small'
                                                 onClick={() =>setIsAdd('subcategory')}
                                             >
-                                                <PlusCircleIcon className='w-6 hover:text-pos_color-green' />
+                                                <PlusCircleIcon className='w-5 hover:text-pos_color-green' />
                                             </IconButton>
                                             :
                                             <IconButton
                                                 size='small'
                                                 onClick={() =>setIsAdd('')}
                                             >
-                                                <XCircleIcon className='w-6 hover:text-pos_color-green' />
+                                                <XCircleIcon className='w-5 hover:text-pos_color-green' />
                                             </IconButton>
                                         }
                                         {
@@ -314,7 +332,7 @@ const ProductFeed = () => {
                                                     value={body.subCategory}
                                                     onChange={e =>handleChange(e)}
                                                     className='bg-gray-50 block w-full px-2 
-                                                    sm:text-sm rounded-md focus:ring-black focus:border-black my-3'
+                                                    text-xs rounded-md focus:ring-black focus:border-black my-3'
                                                 >
                                                     <option value="">Product Category</option>
                                                     {
@@ -337,7 +355,7 @@ const ProductFeed = () => {
                                                     placeholder='Category'
                                                     onChange={e =>setCatbody(e.target.value)}
                                                     className='bg-gray-50 block w-full 
-                                                    sm:text-sm rounded-md focus:ring-black focus:border-black my-3'
+                                                    text-xs rounded-md focus:ring-black focus:border-black my-3'
                                                 />
                                                 {   body.subCategory && catbody &&
                                                     <Button
@@ -355,7 +373,7 @@ const ProductFeed = () => {
                                             value={body.subCategory}
                                             onChange={e =>handleChange(e)}
                                             className='bg-gray-50 block w-full px-2 
-                                            sm:text-sm rounded-md focus:ring-black focus:border-black my-3'
+                                            text-xs rounded-md focus:ring-black focus:border-black my-3'
                                         >
                                             <option value="">Product Sub-Category</option>
                                             {
@@ -389,7 +407,7 @@ const ProductFeed = () => {
                                         value={body.purchasePrice}
                                         onChange={e =>handleChange(e)}
                                         className='bg-gray-50 block w-full px-2 
-                                        sm:text-sm rounded-md focus:ring-black focus:border-black my-5'
+                                        text-xs rounded-md focus:ring-black focus:border-black my-2'
                                     />
                                 </div>
                                 <div className="flex flex-1 flex-col">
@@ -401,7 +419,19 @@ const ProductFeed = () => {
                                         placeholder='Selling Price'
                                         onChange={e =>handleChange(e)}
                                         className='bg-gray-50 block w-full px-2 
-                                        sm:text-sm rounded-md focus:ring-black focus:border-black my-5'
+                                        text-xs rounded-md focus:ring-black focus:border-black my-2'
+                                    />
+                                </div>
+                                <div className="flex flex-1 flex-col">
+                                    <span>Bulk/set price</span>
+                                    <input type="number"
+                                        min={0} 
+                                        name='bulkPrice'
+                                        value={body?.bulkPrice}
+                                        placeholder='Set/catton price'
+                                        onChange={e =>handleChange(e)}
+                                        className='bg-gray-50 block w-full px-2 
+                                        text-xs rounded-md focus:ring-black focus:border-black my-2'
                                     />
                                 </div>
                                 <div className="flex flex-1 flex-col">
@@ -413,7 +443,7 @@ const ProductFeed = () => {
                                         placeholder='Discount (1.5, 1)'
                                         onChange={e =>handleChange(e)}
                                         className='bg-gray-50 block w-full px-2 
-                                        sm:text-sm rounded-md focus:ring-black focus:border-black my-5'
+                                        text-xs rounded-md focus:ring-black focus:border-black my-2'
                                     />
                                 </div>
                             
@@ -439,67 +469,71 @@ const ProductFeed = () => {
                             
                         </main>
                     }
-                   <main className=' transition-all duration-150 md:w-[95%] sm:w-[95%] mx-auto px-2 py-2 mt-4'>
-                        {
-                            products &&
-                            <Fragment>
-                                <div
-                                    className='flex justify-between items-center py-2'                                
-                                >
-                                   <h3
-                                        className='font-semibold text-xl flex-1'   
-                                    >Product List</h3>
-                                    <div
-                                        className='flex-1 flex justify-start'
-                                    >
-                                        {
-                                            add ?
-                                            <XIcon 
-                                                className='btn w-6'
-                                                onClick={() =>setAdd(!add)}
-                                            />
-                                            :
-                                            <PlusCircleIcon 
-                                                className='w-6 btn'
-                                                onClick={() =>setAdd('product')}
-                                            />
-                                        }
-                                    </div>
-                                    <section
-                                        className='flex-1 flex justify-end'
-                                    >                                   
-                                        <div
-                                            className='bg-gray-100 flex-1 rounded-full shadow'
-                                        >
-                                            <input 
-                                                type="text" 
-                                                value={search}
-                                                onChange={e =>setSearch(e.target.value)}
-                                                placeholder='Search by SKU/UPC, Name, Price...'
-                                                className='border-0 bg-transparent w-full rounded-full
-                                                    outline-none hover:ring-0 focus:ring-0
-                                                '
-                                            />
-                                        </div> 
-                                    </section>
-
-                                </div>
-                                {
-                                    products?.length > 0 &&
-                                    <ProductTable 
-                                        query={query}
-                                        search={search}
-                                        setQuery={setQuery}
-                                        setDelete={setDelete}  
-                                        setIsAdd={() =>setIsAdd('product')}
-                                    /> 
-                                }
-                            </Fragment>
+                    {
+                        !cashier &&
                             
-                        }
-                   </main>
+                        <main className=' transition-all duration-150 md:w-[95%] sm:w-[95%] mx-auto px-2 py-2 mt-4'>
+                                {
+                                    products &&
+                                    <Fragment>
+                                        <div
+                                            className='flex justify-between items-center py-2'                                
+                                        >
+                                        <h3
+                                                className='font-semibold text-lg text-gray-500 flex-1'   
+                                            >Product List</h3>
+                                            <div
+                                                className='flex-1 flex justify-start'
+                                            >
+                                                {
+                                                    add ?
+                                                    <XIcon 
+                                                        className='btn w-5'
+                                                        onClick={() =>setAdd(!add)}
+                                                    />
+                                                    :
+                                                    <PlusCircleIcon 
+                                                        className='w-5 btn'
+                                                        onClick={() =>setAdd('product')}
+                                                    />
+                                                }
+                                            </div>
+                                            <section
+                                                className='flex-1 flex justify-end'
+                                            >                                   
+                                                <div
+                                                    className='bg-gray-100 flex-1 h-8 rounded-md shadow'
+                                                >
+                                                    <input 
+                                                        type="text" 
+                                                        value={search}
+                                                        onChange={e =>setSearch(e.target.value)}
+                                                        placeholder='Search by SKU/UPC, Name, Price...'
+                                                        className='border-0 bg-transparent w-full
+                                                            outline-none hover:ring-0 focus:ring-0 text-xs
+                                                        '
+                                                    />
+                                                </div> 
+                                            </section>
+
+                                        </div>
+                                        {
+                                            products?.length > 0 &&
+                                            <ProductTable 
+                                                query={query}
+                                                search={search}
+                                                setQuery={setQuery}
+                                                setDelete={setDelete}  
+                                                setIsAdd={() =>setIsAdd('product')}
+                                            /> 
+                                        }
+                                    </Fragment>
+                                    
+                                }
+                        </main>
+                    }
                 </div>
-                
+                <div className='md:py-48 mb-16' />
                 
             </section>
 

@@ -16,21 +16,21 @@ const ProductsOrderList = ({search, query, setQuery, setIsAdd, setDelete}) => {
             <table
                 className='table w-full'
             >
-                <thead>
+                <thead className='text-xs text-gray-500'>
                     <Fragment>
-                    <th className='text-sm'>S/N</th>
-                    <th className='text-sm'>SKU/UPC</th>
-                    <th className='text-sm'>Product Name</th>
-                    <th className='text-sm'>Category</th>
-                    <th className='text-sm'>Sub-Category</th>
-                    <th className='text-sm'>Qty</th>
-                    <th className='text-sm'>Pur. Price (<strike>N</strike>)</th>
-                    <th className='text-sm'>Sales Price (<strike>N</strike>)</th>
+                    <th>S/N</th>
+                    <th>SKU/UPC</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Sub-Category</th>
+                    <th>Qty</th>
+                    <th>Pur. Price (<strike>N</strike>)</th>
+                    <th>Sales Price (<strike>N</strike>)</th>
                     {/* <th></th> */}
                     </Fragment>
                 </thead>
 
-                <tbody>
+                <tbody className='text-xs'>
                     {
                         products?.length > 0 &&
                        products?.map((items, index) => {
@@ -43,19 +43,19 @@ const ProductsOrderList = ({search, query, setQuery, setIsAdd, setDelete}) => {
                                     <tr
                                         className={ index % 2 ? 'bg-gray-100' : 'bg-white'}
                                     >
-                                        <td className='cursor-default text-sm text-center text-pos_color-green'> {index+1} </td>
-                                        <td className='cursor-default text-sm text-center'> {SKU_UPC} </td>
-                                        <td className='cursor-default text-sm line-clamp-1 text-center'> {productName} </td>
-                                        <td className='cursor-default text-sm text-center'> {category?.name} </td>
-                                        <td className='cursor-default text-sm text-center line-clamp-1'> {subCategory?.name} </td>
-                                        <td className='cursor-default text-sm text-center'> {quantity} </td>
-                                        <td className='cursor-default text-sm text-center text-red-500'> 
+                                        <td className='cursor-default h-6 text-center text-pos_color-green'> {index+1} </td>
+                                        <td className='cursor-default text-center'> {SKU_UPC} </td>
+                                        <td className='cursor-default line-clamp-1 text-center'> {productName} </td>
+                                        <td className='cursor-default text-center'> {category?.name} </td>
+                                        <td className='cursor-default text-center line-clamp-1'> {subCategory?.name} </td>
+                                        <td className='cursor-default text-center'> {quantity} </td>
+                                        <td className='cursor-default text-center text-red-500'> 
                                             {purchasePrice?.toLocaleString()} 
                                         </td>
-                                        <td className='cursor-default text-sm text-center text-pos_color-green'> 
+                                        <td className='cursor-default text-center text-pos_color-green'> 
                                             {salesPrice?.toLocaleString()} 
                                         </td>
-                                        <td className='cursor-default hidden text-sm text-center'>
+                                        <td className='cursor-default hidden text-center'>
                                             <div
                                                 className='flex'
                                             >

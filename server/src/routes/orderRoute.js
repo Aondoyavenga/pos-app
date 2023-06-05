@@ -1,5 +1,8 @@
 import express from 'express'
-import { getAllOrders, placeOrder, getOrderItems, removeOrderItem, getCustomerOrders, getAllOrderItems, getSalesOrders, getPurchasesOrders, getOrderByStatus, removeOrder, closeSalesOrders, handleCloseSales, getClosedSalesPeriodic } from '../methods/orderMethod.js'
+import { getAllOrders, placeOrder, getOrderItems, removeOrderItem, 
+    getCustomerOrders, getAllOrderItems, getSalesOrders, getPurchasesOrders, 
+    getOrderByStatus, removeOrder, closeSalesOrders, handleCloseSales, getClosedSalesPeriodic, 
+    getOrderItemsByDate_Product } from '../methods/orderMethod.js'
 const router = express.Router()
 
 router
@@ -14,6 +17,8 @@ router
     .get('/orderstatus/:status', getOrderByStatus)
     .get('/close/sales', closeSalesOrders)
     .get('/close/date/:startDate/:endDate', getClosedSalesPeriodic)
+    .get('/sold/date_product/:from/:to/:product', getOrderItemsByDate_Product)
+
 
     .post('/', placeOrder)
     .post('/close/sales', handleCloseSales)
