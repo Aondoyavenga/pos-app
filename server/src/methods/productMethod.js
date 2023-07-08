@@ -77,9 +77,9 @@ export const getProductOrderList  = async (req, res) => {
 
 export const createProduct = async (req, res) => {
     try {
-        const { _id, isDelete, SKU_UPC, discount, productName, category,  subCategory, purchasePrice, salesPrice } = req.body
+        const { _id, isDelete, SKU_UPC, discount, productName, category, subCategory, purchasePrice, salesPrice, bulkPrice } = req.body
         
-        const newProduct = new Product({SKU_UPC, discount, productName,category,  subCategory, purchasePrice, salesPrice})
+        const newProduct = new Product({SKU_UPC, discount, productName,category,  subCategory, purchasePrice, bulkPrice, salesPrice})
 
         const subcategory = await Subcategory.findByIdAndUpdate(subCategory, {$addToSet: {productRef:newProduct?._id}})
         const error = newProduct.validateSync()
@@ -91,7 +91,7 @@ export const createProduct = async (req, res) => {
         }
 
         if(_id){
-            const {createdAt} = await Product.findByIdAndUpdate({_id}, {SKU_UPC, discount, productName,category,  subCategory, purchasePrice, salesPrice}, {upsert: true} )
+            const {createdAt} = await Product.findByIdAndUpdate({_id}, {SKU_UPC, discount, productName,category, bulkPrice, subCategory, purchasePrice, salesPrice}, {upsert: true} )
             if(!createdAt) return res.status(404).send({message: 'Internal Server Error'})
         }else {
             newProduct.save()

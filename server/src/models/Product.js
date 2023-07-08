@@ -17,6 +17,7 @@ const productSchema = new Schema({
     },
     purchasePrice: Number,
     salesPrice: Number,
+    bulkPrice: Number,
     discount:{
         type: Number,
         default: 0

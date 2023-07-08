@@ -1,12 +1,12 @@
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { User } from "../models/User.js"
+import { Store } from '../models/Store.js'
 const saltRounds = 10
 
 export const authenticated = async(req, res) =>{
     try {
-        
-        const {user:{role, _id, email, firstName, lastName, phoneNumber, createdAt}, token} = req
+        const {role, _id, email, firstName, lastName, phoneNumber, createdAt, token} = req.user
         return res.send({
             role, _id, email, 
             firstName, lastName, phoneNumber, createdAt, token
@@ -53,18 +53,19 @@ export const userLogIn = async(req, res) => {
 
 export const createUser = async(req, res) => {
     try {
-        const { email, firstName, lastName, phoneNumber, password, role } = req.body
+        const { email, firstName, lastName, phoneNumber, password, role, store } = req.body
         const exist = await User.findOne({email})
         if(exist) return res.status(404).send({message: 'Category Already Exist'})
         const salt = bcrypt.genSaltSync(saltRounds);
         const hashPwd = bcrypt.hashSync(password, salt);
     
-        const newUser = new User({email, firstName, lastName, phoneNumber, password: hashPwd, role})
+        const newUser = new User({email, firstName, lastName, phoneNumber, password: hashPwd, role, store})
         const error = newUser.validateSync()
         if (error && error.message) return res.status(404).send({message: error.message.split(':')[2].split(',')[0]});
     
         const {createdAt} = await newUser.save()
         if(!createdAt) return res.status(404).send({message: 'Internal Server Error'})
+        await Store.findByIdAndUpdate(store, {$addToSet:{users: newUser?._id}})
         res.status(201).send({message: `${firstName} ${lastName} created successful`})
     } catch (error) {
         res.status(404).send({message: `Internal Server Error`})

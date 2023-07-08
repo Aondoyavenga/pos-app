@@ -14,7 +14,7 @@ export const requireToken = async (req, res, next) => {
         }
         const token = authorization.replace("Bearer ", "");
 
-        const payLoad = await jwt.verify(token, process.env.AUTH_SECRET)
+        const payLoad = jwt.verify(token, process.env.AUTH_SECRET)
        
 
         const user = await User.findById(payLoad).select({password: 0, __v: 0, updatedAt: 0})
@@ -26,7 +26,7 @@ export const requireToken = async (req, res, next) => {
        
         
     } catch (error) {
-        res.status(404).send({message: `Internal Server Error`})
+        res.status(404).send({message: `${error?.message} Internal Server Error`})
     }
 }
 

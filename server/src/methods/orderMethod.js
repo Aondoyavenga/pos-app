@@ -11,7 +11,9 @@ export const getSalesOrders = async(req, res) => {
     try {
         const {id, role: {manager}} = req.user
         if(!manager) {
-            const data = await Order.find({orderType: 'SALE', userRef: id})
+            const data = await Order.find({orderType: 'SALE', userRef: id, createdAt: {
+                $gte: start
+            } })
             .populate('customerRef', {__v: 0, updatedAt: 0})
             .populate('userRef', {__v: 0, updatedAt: 0, password: 0}).sort({updatedAt: -1})
             return res.json(data)
@@ -300,7 +302,6 @@ const handleUpdateOrderItem = async(item, next) => {
    try {
     const {quantity, orderType, productRef, orderRow} = item
     // console.log(productRef)
-
     // const newitem = new Orderitem({...item})
     // if(orderItem?.orderRow) return Orderitem.findByIdAndUpdate(orderItem?._id, {$set: {...item}})
         // handleUpdateProduct(productRef, orderType, quantity)
@@ -308,14 +309,19 @@ const handleUpdateOrderItem = async(item, next) => {
     //    try {
          
             // if(err) {
-                const orderItem = await Orderitem.find({orderRow})
-
-                const qty = quantity > orderItem?.quantity ? quantity - orderItem?.quantity : quantity < orderItem.quantity ? orderItem.quantity - quantity :0
-                const type = orderType == 'PURCHASE' && quantity < orderItem?.quantity ? 'SALE': item?.orderType
+                const orderItem = await Orderitem.findOne({orderRow})
+                if(orderItem) {
+                    
+                    const qty = quantity > orderItem?.quantity ? quantity - orderItem?.quantity : quantity < orderItem.quantity ? orderItem.quantity - quantity :0
+                    const type = orderType == 'PURCHASE' && quantity < orderItem?.quantity ? 'SALE': item?.orderType
+                    
+                    await Orderitem.findOneAndUpdate({orderRow},  {...item}, {upsert: true})
                 
+                    return handleUpdateProduct(productRef, type, qty )
+                }
                 await Orderitem.findOneAndUpdate({orderRow},  {...item}, {upsert: true})
-            
-                return handleUpdateProduct(productRef, type, qty )
+                
+                    handleUpdateProduct(productRef, orderType, quantity )
             // }
 
             handleUpdateProduct(productRef, orderType, quantity)
@@ -357,7 +363,9 @@ export const removeOrder = async (req, res) => {
 
 export const placeOrder = async (req, res, next) => {
     try {
-        const { orderId, status,orderType, payment, customerRef, userRef, amount, totalPaid, orderOn, VALUES } = req.body
+       const { user } = req
+        const userRef = user?._id
+        const { orderId, status,orderType, payment, customerRef, amount, totalPaid, orderOn, VALUES } = req.body
         const newOder = new Order({orderId, status, orderOn, orderType, customerRef, userRef, amount, totalPaid, payment})
         if(!orderType || !customerRef || !userRef || !amount || !VALUES?.length > 0) return res.status(404).send({message: 'Invalid request'})
         const error = newOder.validateSync()
@@ -373,7 +381,7 @@ export const placeOrder = async (req, res, next) => {
                 const {productRef, quantity, orderType} = item
                 const qty = parseInt(quantity)
                 // handleUpdateProduct(productRef, orderType, qty)
-                handleUpdateOrderItem(item)
+                handleUpdateOrderItem(item, next)
             });
         
         res.status(201).send({message: `Order successful`})

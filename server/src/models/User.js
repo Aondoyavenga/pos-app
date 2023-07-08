@@ -31,6 +31,10 @@ const userSchema = new Schema({
             default: false
         }
     },
+    store: {
+
+        type: Schema.Types.ObjectId, ref: 'store'
+    },
     status: Boolean
 }, {
     timestamps: true
