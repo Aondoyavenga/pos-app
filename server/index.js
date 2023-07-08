@@ -30,9 +30,9 @@ app.use('/api/v1/subcategory', SUBCATEGORY_ROUTER.router)
 
 app.use('/public/static', express.static(staticDir));
 
-app.get('*', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, './out', 'index.html'))
-})
+// app.get('*', (req, res) =>{
+//     res.sendFile(path.resolve(__dirname, './out', 'index.html'))
+// })
 
 app.listen(PORT, (err) =>{
     if(err) return console.log(err)
